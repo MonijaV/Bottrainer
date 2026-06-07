@@ -19,7 +19,7 @@ def load_snips_eval_samples(max_per_intent: int = 20) -> list[dict]:
     Returns list of {text, intent} dicts.
     """
     try:
-        dataset = load_dataset("snips_built_in_intents", split="train")
+        dataset = load_dataset("oliverguhr/snips-intent-classification", split="train")
         samples = []
         intent_counts = {}
 
