@@ -10,14 +10,14 @@ from retrieval.embeddings import EmbeddingModel
 
 # ── Result Model ─────────────────────────────────────────────────────────────
 
+from pydantic import BaseModel, ConfigDict
+
 class RetrievalResult(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    
     text: str
     intent: str
     similarity_score: float
-
-    class Config:
-        frozen = True
-
 
 # ── Index Builder ─────────────────────────────────────────────────────────────
 
