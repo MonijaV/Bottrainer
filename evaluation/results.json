@@ -1,0 +1,174 @@
+{
+  "metrics": {
+    "accuracy": 0.9875,
+    "weighted_f1": 0.9934,
+    "per_intent": {
+      "book_flight": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "order_food": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "check_weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "cancel_booking": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "track_order": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "set_reminder": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "play_music": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "out_of_scope": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "support": 10
+      }
+    },
+    "total_samples": 80,
+    "correct": 79
+  },
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      10,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      10,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      9
+    ]
+  ],
+  "intent_names": [
+    "book_flight",
+    "order_food",
+    "check_weather",
+    "cancel_booking",
+    "track_order",
+    "set_reminder",
+    "play_music",
+    "out_of_scope"
+  ],
+  "error_analysis": {
+    "total_errors": 1,
+    "error_rate": 0.0125,
+    "top_confusions": [
+      {
+        "confusion_pair": "out_of_scope \u2192 unclear",
+        "true_intent": "out_of_scope",
+        "predicted_intent": "unclear",
+        "count": 1,
+        "examples": [
+          "Explain blockchain to me"
+        ]
+      }
+    ],
+    "all_errors": [
+      {
+        "text": "Explain blockchain to me",
+        "true_intent": "out_of_scope",
+        "predicted_intent": "unclear"
+      }
+    ]
+  },
+  "avg_latency_ms": 4724.2,
+  "total_samples": 80
+}
